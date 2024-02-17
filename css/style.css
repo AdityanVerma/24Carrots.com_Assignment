@@ -1,0 +1,316 @@
+@font-face {
+    src: url(../assets/font/Calson-Font/F37Caslon-RegularDisplay.otf);
+    font-family: "F37 Caslon", serif;
+}
+@font-face {
+    src: url(../assets/font/Futura-Font/FuturaPTBook.otf);
+    font-family: "futura-pt", sans-serif;
+}
+:root{
+    --futura-pt: "futura-pt", sans-serif;
+    --F37-Caslon: "F37 Caslon", serif;
+
+    --nav-height: 131px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: var(--nav-height/3);
+    font-family: var(--futura-pt);
+}
+
+/* ------------------------------ UNIVERSAL-CLASSES ------------------------------ */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.heading{
+    font-family: "F37 Caslon", serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #1A4122;
+    line-height: 92%;
+    letter-spacing: -3px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+/* ------------------------------ HEADER-MAIN ------------------------------ */
+header {
+    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: var(--nav-height);
+    z-index: 78;
+    background-color: #fff;
+    transition: all 300ms ease-in-out;
+}
+header #wrapper{
+    width: 100%;
+    max-width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+}
+header #wrapper nav{
+    top: 10px;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+header nav ul {
+    justify-content: space-around;
+    list-style: none;
+}
+header nav ul li {
+    padding: 15px 10px;
+}
+header nav ul li a {
+    letter-spacing: 1px;
+    color: #000;
+    padding: 6px 15px;
+    text-decoration: none;
+    font-size: 0.87rem;
+}
+header nav ul li a:hover{
+    color: #C15627;
+}
+header nav ul li #logo{
+    margin: 0 100px;
+}
+header nav ul li #logo span{
+    font-size: 0;
+}
+.nav--hidden{
+    transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+/* ------------------------------ MAIN ------------------------------ */
+main{
+    position: relative;
+}
+
+/* --------- TESTIMONIAL-VIDEO-BLOCK --------- */
+main #testimonial-video-block{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+main #testimonial-video-block .vid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main #testimonial-video-block .vid-wrapper video,
+main #testimonial-video-block .vid-wrapper h2{
+    grid-row: 1;
+}
+main #testimonial-video-block .vid-wrapper video{
+    grid-column: 1/4;
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    object-fit: cover;
+}
+main #testimonial-video-block .vid-wrapper h2{
+    grid-column: 2/4;
+    align-self: center;
+    justify-self: center;
+    font-family: var(--F37-Caslon);
+    font-size: 7rem;
+    font-weight: lighter;
+    position: absolute;
+    color: #FFF;
+    z-index: 1;
+}
+main #testimonial-video-block .vid-wrapper .box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    z-index: 0;
+    background-color: #000;
+}
+/* main #testimonial-video-block .vid-wrapper .down-cheveron {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(img/icon/down-cheveron.svg);
+    width: 38px;
+    height: 12px;
+    position: absolute;
+    bottom: 52px;
+    z-index: 99;
+} */
+
+/* --------- SLIDER-SECTION --------- */
+main #slider-section{
+    padding-top: 120px;
+    flex-direction: row;
+}
+main #slider-section #text-area{
+    width: 50%;
+}
+main #slider-section #text-area #text-wrapper{
+    flex-direction: column;
+    color: #647B4E;
+    text-align: center;
+    font-family: "Rustica", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin: 100px 200px;
+}
+main #slider-section #text-area #text-wrapper h3{
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 3.6px;
+    line-height: 100%;
+    margin-bottom: 30px;
+}
+main #slider-section #text-area #text-wrapper p{
+    max-width: 490px;
+    margin: 30px auto 35px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 140%;
+}
+main #slider-section #text-area #text-wrapper p a{
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-size: 14px;
+}
+main #slider-section #slider{
+    width: 50%;
+    overflow: hidden;
+    border-top-left-radius: 50%;
+}
+main #slider-section #slider #slider-image{
+    border-top-left-radius: 40%;
+    width: 50%;
+    height: 78vh;
+}
+
+/* ------------------------------ WEDDING ------------------------------ */
+#wedding::before {
+    content: '';
+    width: 600px;
+    height: 2059px;
+    background-image: url(img/big-carrot.svg);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+#wedding{
+    height: 100vh;
+}
+#wedding #wedding-wrapper{
+    margin: 80px 300px;
+    gap: 100px;
+}
+#wedding #wedding-wrapper #image-box{
+    position: relative;
+    width: 40%;
+    border-radius: 100vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+}
+#wedding #wedding-wrapper #image-box img{
+    height: 60%;
+    overflow: hidden;
+    background-position: center center;
+}
+#wedding #wedding-wrapper #wedding-about{
+    width: 60%;
+    margin-top: 100px;
+}
+#wedding #wedding-wrapper #wedding-about #container{
+    font-family: var(--F37-Caslon);
+    display: grid;
+    height: 50%;
+    grid-template-columns: 3fr 9fr;
+    margin-top: 50px;
+}
+#wedding #wedding-wrapper #wedding-about #sidebar ul{
+    list-style: none;
+    font-weight: 500;
+}
+#wedding #wedding-wrapper #wedding-about #sidebar ul li{
+    padding: 20px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+#wedding #wedding-wrapper #wedding-about #sidebar ul li a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: rgba(146, 146, 146, 0.5);
+}
+#wedding #wedding-wrapper #wedding-about #sidebar ul li a:active{
+    color: #1A4122;
+}
+#wedding #wedding-wrapper #wedding-about #sidebar ul li a:hover{
+    color: #C15627;
+}
+#wedding #wedding-wrapper #wedding-about #content{
+    overflow: hidden;
+    padding: 20px;
+}
+#wedding #wedding-wrapper #wedding-about iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------------------ BUTTONS ------------------------------ */
+/* #topBtn {
+    display: none;
+    position: fixed;
+    bottom: -2px;
+    width: 186px;
+    height: 38px;
+    font-size: 0px;
+    background-image: url(../assets/img/top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    border: none;
+    z-index: 9;
+    background-color: transparent;
+    left: 50%;
+    margin-left: -93px;
+    transition: .5s;
+    cursor: pointer;
+} */
+.btn{
+    background-color: #C15627;
+    color: #FFF;
+    border-radius: 90px;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #fff;
+    background-color: #CF5C2A;
+    filter: brightness(120%);
+}

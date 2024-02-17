@@ -1,0 +1,46 @@
+@font-face {
+    src: url(../assets/font/Futura-Font/FuturaPTBook.otf);
+    font-family: "futura-pt", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "futura-pt", sans-serif;
+    color: #1A4122;
+}
+
+/* ---------------------- CONTENT ---------------------- */
+h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.1em; 
+    margin-bottom: 20px;
+}
+p{
+    font-size: 21px;
+    font-weight: lighter;
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn{
+    background-color: #C15627;
+    color: #FFF;
+    border-radius: 90px;
+    transition: all 400ms ease-in-out;
+    padding: 16px 30px;
+}
+.btn:hover{
+    background-color: #CF5C2A;
+    filter: brightness(120%);
+}
